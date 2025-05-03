@@ -75,4 +75,16 @@ b { font-size: 1.48rem; }
 	text-decoration: none;
 }
 
-#resources { & a { & img:hover { opacity: 0.48; } } }
+#resources {
+	font-size: 0; /* Remove whitespace between image anchor links */
+	& img {
+		width: 24px;
+		height: 24px;
+	}
+	& a {
+		display: inline;
+		margin-right: 12px;
+		& img:hover { opacity: 0.48; }
+	}
+	& * { vertical-align: middle; }
+}
